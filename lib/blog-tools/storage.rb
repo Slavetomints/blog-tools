@@ -10,7 +10,7 @@ module BlogTools
     CONFIG_DIR            = ENV['BLOG_TOOLS_DIR'] || File.join(Dir.home, '.config', 'blog-tools')
     LISTS_FILE            = File.join(CONFIG_DIR, 'lists.yml')
     CONFIG_FILE           = File.join(CONFIG_DIR, 'config.yml')
-    TEMPLATES_DIR         = File.join(CONFIG_DIR, 'templates')
+    TEMPLATES_DIR         = File.join(CONFIG_DIR, 'templates/')
     DEFAULT_TEMPLATE_FILE = File.join(TEMPLATES_DIR, 'post.md')
 
     # Ensure required directories and files exist.
@@ -57,7 +57,7 @@ module BlogTools
       default_config = {
         'author' => ENV['USER'] || 'changeme',
         'default_template' => 'post.md',
-        'tags' => []
+        'tags' => ['blog']
       }
 
       File.write(CONFIG_FILE, default_config.to_yaml)
@@ -68,21 +68,15 @@ module BlogTools
 
       default_template = <<~MARKDOWN
         ---
-        title: "New Blog Post"
-        date: #{Time.now.strftime('%Y-%m-%d')}
-        layout: post
-        tags: []
+        title: "<%= title %>"
+        date: <%= date %>
+        author: <%= author %>
+        tags: [<%= tags.map { |t| ""#{t}"" }.join(", ") %>]
         ---
 
-        # New Blog Post
+        # <%= title %>
 
-        Write your content here.
-
-        ## Introduction
-
-        ## Main Content
-
-        ## Conclusion
+        <%= content %>
       MARKDOWN
 
       File.write(DEFAULT_TEMPLATE_FILE, default_template)

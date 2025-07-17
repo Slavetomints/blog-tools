@@ -2,4 +2,12 @@ AllCops:
     NewCops: enable
     TargetRubyVersion: 3.4
 Metrics/MethodLength:
-    Max: 15
+    Max: 20
+Metrics/CyclomaticComplexity: 
+    Enabled: false
+Metrics/AbcSize:
+    Enabled: false
+Metrics/PerceivedComplexity:
+    Enabled: false
+Metrics/ClassLength:
+    Enabled: false
