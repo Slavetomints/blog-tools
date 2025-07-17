@@ -18,6 +18,7 @@ module BlogTools
   class CLI < Thor
     def initialize(*args)
       super
+      Storage.setup!
     end
 
     desc 'generate TITLE', 'Create a new post'
