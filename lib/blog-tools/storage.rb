@@ -66,12 +66,12 @@ module BlogTools
     def self.create_default_template
       return unless Dir.empty?(TEMPLATES_DIR)
 
-      default_template = <<~MARKDOWN
+      default_template = <<~'MARKDOWN'
         ---
         title: "<%= title %>"
         date: <%= date %>
         author: <%= author %>
-        tags: [<%= tags.map { |t| ""#{t}"" }.join(", ") %>]
+        tags: [<%= tags.map { |t| "\"#{t}\"" }.join(", ") %>]
         ---
 
         # <%= title %>

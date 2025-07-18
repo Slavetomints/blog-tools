@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = 'blog-tools'
-  s.version     = '0.1.1'
+  s.version     = '0.1.2'
   s.summary     = 'CLI tools for managing blog posts'
   s.authors     = ['Slavetomints']
   s.email       = ['slavetomints@protonmail.com']
