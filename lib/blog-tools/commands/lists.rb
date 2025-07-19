@@ -18,6 +18,7 @@ module BlogTools
       method_option :completed, type: :boolean, default: false, desc: 'Show only completed posts'
       method_option :in_progress, type: :boolean, default: false, desc: 'show only in-progress posts'
       method_option :status, type: :boolean, default: false, desc: 'Show post status as well'
+      method_option :all, type: :boolean, default: false, desc: 'Show all info about the post'
       def list(list)
         return puts('[!] List not found') unless @lists[list]
 
@@ -101,6 +102,7 @@ module BlogTools
       desc 'update LIST POST', 'Update the status of a blog post idea (use --complete or --in_progress)'
       method_option :complete, type: :boolean, default: false, desc: 'Mark as complete'
       method_option :in_progress, type: :boolean, default: false, desc: 'Mark as in progress'
+      method_option :path, type: :string, desc: 'Path to the post contents'
       def update(list, post_name)
         return puts('[!] List not found') unless @lists[list]
         return puts('[!] Post not found') unless @lists[list][:posts].key?(post_name)
@@ -125,7 +127,27 @@ module BlogTools
           end
         end
 
+        post[:path] = options[:path] if options[:path]
+
         Storage.write_lists(@lists)
+      end
+
+      private
+
+      def show_statuses
+        if options[:status]
+          status =
+            if data[:completed]
+              '[✓]'
+            elsif data[:in_progress]
+              '[~]'
+            else
+              '[ ]'
+            end
+          puts "- #{status} #{item}"
+        else
+          puts "- #{item}"
+        end
       end
     end
   end
