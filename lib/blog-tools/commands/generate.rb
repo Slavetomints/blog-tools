@@ -33,7 +33,8 @@ module BlogTools
           content: options[:content] ? File.read(File.expand_path(options[:content])) : ''
         )
 
-        output_filename = options[:output] || "#{title.downcase.strip.gsub(/\s+/, '_')}.md"
+        dir_path = "#{options[:output]}/"
+        output_filename = options[:output] ? "#{dir_path}#{title}.md" : "#{title.downcase.strip.gsub(/\s+/, '_')}.md"
         File.write(output_filename, result)
 
         puts "[✓] Post generated at #{output_filename}"

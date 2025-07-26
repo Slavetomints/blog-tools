@@ -12,6 +12,18 @@ module BlogTools
     CONFIG_FILE           = File.join(CONFIG_DIR, 'config.yml')
     TEMPLATES_DIR         = File.join(CONFIG_DIR, 'templates/')
     DEFAULT_TEMPLATE_FILE = File.join(TEMPLATES_DIR, 'post.md')
+    DEFAULT_TEMPLATE = <<~'MARKDOWN'
+      ---
+      title: "<%= title %>"
+      date: <%= date %>
+      author: <%= author %>
+      tags: [<%= tags.map { |t| "\"#{t}\"" }.join(", ") %>]
+      ---
+
+      # <%= title %>
+
+      <%= content %>
+    MARKDOWN
 
     # Ensure required directories and files exist.
     def self.setup!
@@ -52,6 +64,8 @@ module BlogTools
     def self.create_config_file
       return if File.exist?(CONFIG_FILE)
 
+      FileUtils.mkdir_p(File.dirname(CONFIG_FILE))
+
       puts '[!] No configuration file found, generating now...'
 
       default_config = {
@@ -66,20 +80,7 @@ module BlogTools
     def self.create_default_template
       return unless Dir.empty?(TEMPLATES_DIR)
 
-      default_template = <<~'MARKDOWN'
-        ---
-        title: "<%= title %>"
-        date: <%= date %>
-        author: <%= author %>
-        tags: [<%= tags.map { |t| "\"#{t}\"" }.join(", ") %>]
-        ---
-
-        # <%= title %>
-
-        <%= content %>
-      MARKDOWN
-
-      File.write(DEFAULT_TEMPLATE_FILE, default_template)
+      File.write(DEFAULT_TEMPLATE_FILE, DEFAULT_TEMPLATE)
       puts "[+] Created default template: #{DEFAULT_TEMPLATE_FILE}"
     end
   end

@@ -18,7 +18,7 @@ module BlogTools
       method_option :completed, type: :boolean, default: false, desc: 'Show only completed posts'
       method_option :in_progress, type: :boolean, default: false, desc: 'show only in-progress posts'
       method_option :status, type: :boolean, default: false, desc: 'Show post status as well'
-      method_option :all, type: :boolean, default: false, desc: 'Show all info about the post'
+      # TODO: all option for all information about the post
       def list(list)
         return puts('[!] List not found') unless @lists[list]
 
@@ -73,7 +73,7 @@ module BlogTools
           Storage.write_lists(@lists)
           puts "[✓] Deleted '#{list}' list"
         when 'n', ''
-          puts '[i] Cancelled.'
+          puts '[i] Cancelled deletion.'
         else
           puts '[!] Invalid input. Not deleting.'
         end
@@ -93,23 +93,27 @@ module BlogTools
           Storage.write_lists(@lists)
           puts "[✓] Deleted '#{post_name}' post"
         when 'n', ''
-          puts '[i] Cancelled.'
+          puts '[i] Cancelled deletion.'
         else
           puts '[!] Invalid input. Not deleting.'
         end
       end
 
-      desc 'update LIST POST', 'Update the status of a blog post idea (use --complete or --in_progress)'
-      method_option :complete, type: :boolean, default: false, desc: 'Mark as complete'
+      desc 'update LIST POST', 'Update the status of a blog post idea'
+      method_option :completed, type: :boolean, default: false, desc: 'Mark as complete'
       method_option :in_progress, type: :boolean, default: false, desc: 'Mark as in progress'
       method_option :path, type: :string, desc: 'Path to the post contents'
+      method_option :tags, type: :array
       def update(list, post_name)
+        unless options[:completed] || options[:in_progress] || options[:tags] || options[:path]
+          return puts('[!] Please specify a status. Type "blog-tools lists help update" for more info.')
+        end
         return puts('[!] List not found') unless @lists[list]
         return puts('[!] Post not found') unless @lists[list][:posts].key?(post_name)
 
         post = @lists[list][:posts][post_name]
 
-        if options[:complete]
+        if options[:completed]
           if post[:completed]
             puts('[!] Post already marked as complete')
           else
@@ -126,8 +130,10 @@ module BlogTools
             puts("[✓] Marked '#{post_name}' as in progress")
           end
         end
-
+        post[:tags] = options[:tags] if options[:tags]
+        puts "Added the following tags to the post: #{options[:tags]}" if options[:tags]
         post[:path] = options[:path] if options[:path]
+        puts "The post content is located at: #{options[:path]}" if options[:path]
 
         Storage.write_lists(@lists)
       end
