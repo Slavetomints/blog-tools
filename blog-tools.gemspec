@@ -15,5 +15,5 @@ Gem::Specification.new do |s|
   s.metadata['rubygems_mfa_required'] = 'true'
   s.homepage    = 'https://rubygems.org/gems/blog-tools'
   s.cert_chain  = ['certs/slavetomints.pem']
-  s.signing_key = File.expand_path('~/.ssh/gem-private_key.pem') if $0 =~ /gem\z/
+  s.signing_key = File.expand_path('~/.ssh/gem-private_key.pem') if $PROGRAM_NAME =~ /gem\z/
 end

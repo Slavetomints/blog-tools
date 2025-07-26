@@ -11,3 +11,8 @@ Metrics/PerceivedComplexity:
     Enabled: false
 Metrics/ClassLength:
     Enabled: false
+Metrics/BlockLength:
+    Enabled: false
+
+plugins: 
+  - rubocop-rspec
