@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+require_relative 'lib/blog-tools/version'
+
 Gem::Specification.new do |s|
   s.name        = 'blog-tools'
-  s.version     = '0.1.2'
+  s.version     = BlogTools::VERSION
   s.summary     = 'CLI tools for managing blog posts'
   s.authors     = ['Slavetomints']
   s.email       = ['slavetomints@protonmail.com']
