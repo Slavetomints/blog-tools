@@ -35,15 +35,15 @@ RSpec.describe BlogTools::Commands::Generate do
     it 'creates a post to a specific place' do
       template_setup
       FileUtils.mkdir_p('test')
-      described_class.start(%w[post template_output --output=test/template_output.md])
+      described_class.start(%w[post template_output --output=test/])
       expect(File).to exist('test/template_output.md')
     end
 
     it 'creates a post using content from a specified file' do
       template_setup
       File.write('input_content.md', 'Hello from the test content!')
-      described_class.start(%w[post content_test --content=input_content.md --output=output.md])
-      expect(File.read('output.md')).to include('Hello from the test content!')
+      described_class.start(%w[post content_test --content=input_content.md])
+      expect(File.read('content_test.md')).to include('Hello from the test content!')
     end
   end
 end

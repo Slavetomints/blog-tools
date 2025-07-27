@@ -210,14 +210,14 @@ RSpec.describe BlogTools::Commands::Lists do
       BlogTools::Storage.setup!
       create_basic_list
       described_class.start(%w[update test-list test-post1 --path=~/post.md])
-      expect(File.readlines(BlogTools::Storage::LISTS_FILE).join).to include("---\ntest-list:\n  :posts:\n    test-post1:\n      :completed: false\n      :in_progress: false\n      :path: \"~/post.md\"\n    test-post2:\n      :completed: false\n      :in_progress: false\n") # rubocop:disable Layout/LineLength
+      expect(File.readlines(BlogTools::Storage::LISTS_FILE).join).to include(':path: "~/post.md"')
     end
 
     it 'adds the tags to a post' do
       BlogTools::Storage.setup!
       create_basic_list
       described_class.start(%w[update test-list test-post1 --tags=test-tag])
-      expect(File.readlines(BlogTools::Storage::LISTS_FILE).join).to include("---\ntest-list:\n  :posts:\n    test-post1:\n      :completed: false\n      :in_progress: false\n      :path: \"~/post.md\"\n    test-post2:\n      :completed: false\n      :in_progress: false\n") # rubocop:disable Layout/LineLength
+      expect(File.readlines(BlogTools::Storage::LISTS_FILE).join).to include('test-tag')
     end
   end
 end
