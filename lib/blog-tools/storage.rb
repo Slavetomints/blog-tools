@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'colorize'
 require 'fileutils'
 require 'yaml'
 
@@ -57,7 +58,7 @@ module BlogTools
       data = YAML.safe_load_file(LISTS_FILE, permitted_classes: [Symbol, Date, Time], aliases: true)
       data.is_a?(Hash) ? data : {}
     rescue Psych::SyntaxError => e
-      warn "[!] Failed to parse lists.yml: #{e.message}"
+      warn "[!] Failed to parse lists.yml: #{e.message}".colorize(:red)
       {}
     end
 
@@ -66,7 +67,7 @@ module BlogTools
 
       FileUtils.mkdir_p(File.dirname(CONFIG_FILE))
 
-      puts '[!] No configuration file found, generating now...'
+      puts '[!] No configuration file found, generating now...'.colorize(:red)
 
       default_config = {
         'author' => ENV['USER'] || 'changeme',

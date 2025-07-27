@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'colorize'
 require 'erb'
 require 'date'
 require_relative '../storage'
@@ -12,7 +13,7 @@ module BlogTools
       method_option :template, type: :string, desc: 'Specify a template file'
       method_option :tags, type: :array, desc: 'Specify tags (space separated)'
       method_option :author, type: :string, desc: 'Specify author'
-      method_option :output, type: :string, desc: 'Output path or filename (default: title.md)'
+      method_option :output, type: :string, desc: 'Output directory'
       method_option :content, type: :string, desc: 'Path to content of post'
       def post(title)
         config = File.exist?(Storage::CONFIG_FILE) ? YAML.load_file(Storage::CONFIG_FILE) : {}
@@ -20,7 +21,7 @@ module BlogTools
         template_file = options[:template] || config['default_template'] || 'post.md'
         template_path = File.expand_path(File.join(Storage::TEMPLATES_DIR + template_file))
 
-        return puts("[!] Template file not found: #{template_path}") unless File.exist?(template_path)
+        return puts "[!] Template file not found: #{template_path}".colorize(:red) unless File.exist?(template_path)
 
         template = File.read(template_path)
         renderer = ERB.new(template)
@@ -37,7 +38,7 @@ module BlogTools
         output_filename = options[:output] ? "#{dir_path}#{title}.md" : "#{title.downcase.strip.gsub(/\s+/, '_')}.md"
         File.write(output_filename, result)
 
-        puts "[✓] Post generated at #{output_filename}"
+        puts "[✓] Post generated at #{output_filename}".colorize(:green)
       end
     end
   end

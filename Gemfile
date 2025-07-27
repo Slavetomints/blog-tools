@@ -15,3 +15,5 @@ gem 'fakefs', '~> 3.0'
 gem 'rubocop-rspec', '~> 3.6'
 
 gem 'rake', '~> 13.3'
+
+gem "yard", "~> 0.9.37"
