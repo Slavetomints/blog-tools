@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: BlogTools::Commands::Lists
+  
+    &mdash; Documentation by YARD 0.9.37
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "BlogTools::Commands::Lists";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (L)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../BlogTools.html" title="BlogTools (module)">BlogTools</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Commands.html" title="BlogTools::Commands (module)">Commands</a></span></span>
+     &raquo; 
+    <span class="title">Lists</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: BlogTools::Commands::Lists
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Thor</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Thor</li>
+          
+            <li class="next">BlogTools::Commands::Lists</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/blog-tools/commands/lists.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>BlogTools::Commands::Lists handles post lists</p>
+
+<p>List handles all of the subcommands dealing with making, editing, and
+creating lists of blog post ideas</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Show all posts in a list</p>
+</div></h5>
+      
+      <pre class="example code"><code>blog-tools lists show list</code></pre>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Remove a post from a list</p>
+</div></h5>
+      
+      <pre class="example code"><code>blog-tools lists remove list post</code></pre>
+    
+  </div>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../CLI.html" title="BlogTools::CLI (class)">BlogTools::CLI</a></span></li>
+    
+      <li><span class='object_link'><a href="../Storage.html" title="BlogTools::Storage (module)">Storage</a></span></li>
+    
+  </ul>
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add-instance_method" title="#add (instance method)">#<strong>add</strong>(list, post_name)  &#x21d2; Nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Adds a post to a list.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-instance_method" title="#create (instance method)">#<strong>create</strong>(name)  &#x21d2; Nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Creates a new list.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>(list)  &#x21d2; Nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Deletes a list.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(*args)  &#x21d2; Lists </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Initializes the <code>lists</code> command with stored list data.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove-instance_method" title="#remove (instance method)">#<strong>remove</strong>(list, post_name)  &#x21d2; Nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Removes a post from a list.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#show-instance_method" title="#show (instance method)">#<strong>show</strong>(list)  &#x21d2; Nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Shows all posts that are in a list.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update-instance_method" title="#update (instance method)">#<strong>update</strong>(list, post_name)  &#x21d2; Nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Updates aspects of a post in a list.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="" title="BlogTools::Commands::Lists (class)">Lists</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Initializes the <code>lists</code> command with stored list data.</p>
+
+<p>This constructor is automatically called by Thor when the <code>lists</code> subcommand is invoked.
+It loads existing lists from storage into the <code>@lists</code> instance variable.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>args</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command-line arguments passed to the subcommand from Thor</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../Storage.html#LISTS_FILE-constant" title="BlogTools::Storage::LISTS_FILE (constant)">Storage::LISTS_FILE</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/blog-tools/commands/lists.rb', line 30</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>super</span>
+  <span class='ivar'>@lists</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Storage.html" title="BlogTools::Storage (module)">Storage</a></span></span><span class='period'>.</span><span class='id identifier rubyid_read_lists'><span class='object_link'><a href="../Storage.html#read_lists-class_method" title="BlogTools::Storage.read_lists (method)">read_lists</a></span></span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add-instance_method">
+  
+    #<strong>add</strong>(list, post_name)  &#x21d2; <tt>Nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Adds a post to a list</p>
+
+<p>This command takes the name of a list and the name of a post to be added.
+Assuming that the list exists, it will add the post to the list, and
+write the result to the list configuration file</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Adding a post to a list</p>
+</div></h5>
+      
+      <pre class="example code"><code>❯ blog-tools lists add test example
+[✓] Added example to test list</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>list</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the list</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>post_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the post</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+134
+135
+136
+137
+138
+139
+140</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/blog-tools/commands/lists.rb', line 134</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_list'>list</span><span class='comma'>,</span> <span class='id identifier rubyid_post_name'>post_name</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[!] List not found</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:red</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='ivar'>@lists</span><span class='lbracket'>[</span><span class='id identifier rubyid_list'>list</span><span class='rbracket'>]</span>
+
+  <span class='ivar'>@lists</span><span class='lbracket'>[</span><span class='id identifier rubyid_list'>list</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:posts</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_post_name'>post_name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>completed:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>in_progress:</span> <span class='kw'>false</span> <span class='rbrace'>}</span>
+  <span class='const'><span class='object_link'><a href="../Storage.html" title="BlogTools::Storage (module)">Storage</a></span></span><span class='period'>.</span><span class='id identifier rubyid_write_lists'><span class='object_link'><a href="../Storage.html#write_lists-class_method" title="BlogTools::Storage.write_lists (method)">write_lists</a></span></span><span class='lparen'>(</span><span class='ivar'>@lists</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[✓] Added </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_post_name'>post_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> to </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_list'>list</span><span class='embexpr_end'>}</span><span class='tstring_content'> list</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:green</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create-instance_method">
+  
+    #<strong>create</strong>(name)  &#x21d2; <tt>Nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Creates a new list</p>
+
+<p>This command takes in a name for a list, and then creates a new list in
+the lists configuration file.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>creating a new list</p>
+</div></h5>
+      
+      <pre class="example code"><code>❯ blog-tools lists create test
+[✓] Created list: test</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the list</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115
+116
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/blog-tools/commands/lists.rb', line 115</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='ivar'>@lists</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>posts:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rbrace'>}</span>
+  <span class='const'><span class='object_link'><a href="../Storage.html" title="BlogTools::Storage (module)">Storage</a></span></span><span class='period'>.</span><span class='id identifier rubyid_write_lists'><span class='object_link'><a href="../Storage.html#write_lists-class_method" title="BlogTools::Storage.write_lists (method)">write_lists</a></span></span><span class='lparen'>(</span><span class='ivar'>@lists</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[✓] Created list: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:green</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete-instance_method">
+  
+    #<strong>delete</strong>(list)  &#x21d2; <tt>Nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Deletes a list</p>
+
+<p>This command takes in the name of a list and deletes it from the lists
+configuration file. It requires user input to confirm the deletion of
+the list. Once the user gives confirmation, it edits the <code>@lists</code>
+variable and writes it back to the lists configuration file.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Deleting a list</p>
+</div></h5>
+      
+      <pre class="example code"><code>❯ blog-tools lists delete test
+[?] Are you sure you want to delete the &#39;test&#39; list?
+[?] This action cannot be undone. Proceed? (y/N)
+&gt; y
+[✓] Deleted &#39;test&#39; list</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>list</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the list</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/blog-tools/commands/lists.rb', line 158</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_list'>list</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[!] List not found</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:red</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='ivar'>@lists</span><span class='lbracket'>[</span><span class='id identifier rubyid_list'>list</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[?] Are you sure you want to delete the &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_list'>list</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; list?</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:yellow</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[?] This action cannot be undone. Proceed? (y/N)\n&gt; </span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:yellow</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='op'>=</span> <span class='gvar'>$stdin</span><span class='period'>.</span><span class='id identifier rubyid_gets'>gets</span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
+
+  <span class='kw'>case</span> <span class='id identifier rubyid_input'>input</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>y</span><span class='tstring_end'>&#39;</span></span>
+    <span class='ivar'>@lists</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_list'>list</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../Storage.html" title="BlogTools::Storage (module)">Storage</a></span></span><span class='period'>.</span><span class='id identifier rubyid_write_lists'><span class='object_link'><a href="../Storage.html#write_lists-class_method" title="BlogTools::Storage.write_lists (method)">write_lists</a></span></span><span class='lparen'>(</span><span class='ivar'>@lists</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[✓] Deleted &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_list'>list</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; list</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:green</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[i] Cancelled deletion.</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:blue</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[!] Invalid input. Not deleting.</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:red</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove-instance_method">
+  
+    #<strong>remove</strong>(list, post_name)  &#x21d2; <tt>Nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Removes a post from a list</p>
+
+<p>This command take in both a list name and a post name, and then removes
+the post from the list. It requires user confirmation in order to make
+the deletion. Once the user confirms, it edits the <code>@lists</code> variable,
+and writes it to the lists configuration file.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code>❯ blog-tools lists remove example example-post-1
+[?] Are you sure you want to delete the post &#39;example-post-1&#39;?
+[?] This action cannot be undone. Proceed? (y/N)
+&gt; y
+[✓] Deleted &#39;example-post-1&#39; post</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>list</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the list</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>post_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the post</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/blog-tools/commands/lists.rb', line 194</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove'>remove</span><span class='lparen'>(</span><span class='id identifier rubyid_list'>list</span><span class='comma'>,</span> <span class='id identifier rubyid_post_name'>post_name</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[!] List not found</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:red</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='ivar'>@lists</span><span class='lbracket'>[</span><span class='id identifier rubyid_list'>list</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[?] Are you sure you want to delete the post &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_post_name'>post_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;?</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:yellow</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[?] This action cannot be undone. Proceed? (y/N)\n&gt; </span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:yellow</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='op'>=</span> <span class='gvar'>$stdin</span><span class='period'>.</span><span class='id identifier rubyid_gets'>gets</span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
+
+  <span class='kw'>case</span> <span class='id identifier rubyid_input'>input</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>y</span><span class='tstring_end'>&#39;</span></span>
+    <span class='ivar'>@lists</span><span class='lbracket'>[</span><span class='id identifier rubyid_list'>list</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:posts</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_post_name'>post_name</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../Storage.html" title="BlogTools::Storage (module)">Storage</a></span></span><span class='period'>.</span><span class='id identifier rubyid_write_lists'><span class='object_link'><a href="../Storage.html#write_lists-class_method" title="BlogTools::Storage.write_lists (method)">write_lists</a></span></span><span class='lparen'>(</span><span class='ivar'>@lists</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[✓] Deleted &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_post_name'>post_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; post</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:green</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[i] Cancelled deletion.</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:blue</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[!] Invalid input. Not deleting.</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:red</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="show-instance_method">
+  
+    #<strong>show</strong>(list)  &#x21d2; <tt>Nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Shows all posts that are in a list</p>
+
+<p>This command reads the list from the <code>@lists</code> variable, and then shows it
+You can customize what it shows (completed/uncompleted), and if it shows
+the status of the post.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Basic usage</p>
+</div></h5>
+      
+      <pre class="example code"><code>❯ blog-tools lists show example
+EXAMPLE
+- example-post-1
+- example-post-2
+- example-post-3
+- example-post-4
+- example-post-5</code></pre>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>using the <code>--status</code> flag</p>
+</div></h5>
+      
+      <pre class="example code"><code>❯ blog-tools lists show example --status
+EXAMPLE
+- [✓] example-post-1
+- [~] example-post-2
+- [✓] example-post-3
+- [ ] example-post-4
+- [ ] example-post-5</code></pre>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>using the <code>--completed</code> flag</p>
+</div></h5>
+      
+      <pre class="example code"><code>❯ blog-tools lists show example --completed
+EXAMPLE
+- example-post-1
+- example-post-3</code></pre>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>using the <code>--in-progress</code> flag</p>
+</div></h5>
+      
+      <pre class="example code"><code>❯ blog-tools lists show example --in-progress
+EXAMPLE
+- example-post-2</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>list</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the list</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/blog-tools/commands/lists.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span><span class='lparen'>(</span><span class='id identifier rubyid_list'>list</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[!] List not found</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:red</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='ivar'>@lists</span><span class='lbracket'>[</span><span class='id identifier rubyid_list'>list</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span>
+  <span class='ivar'>@lists</span><span class='lbracket'>[</span><span class='id identifier rubyid_list'>list</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:posts</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>|</span>
+    <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:completed</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:completed</span><span class='rbracket'>]</span>
+    <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:in_progress</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:in_progress</span><span class='rbracket'>]</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:status</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:completed</span><span class='rbracket'>]</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[✓]</span><span class='tstring_end'>&#39;</span></span>
+        <span class='kw'>elsif</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:in_progress</span><span class='rbracket'>]</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[~]</span><span class='tstring_end'>&#39;</span></span>
+        <span class='kw'>else</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[ ]</span><span class='tstring_end'>&#39;</span></span>
+        <span class='kw'>end</span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>- </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_status'>status</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>- </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update-instance_method">
+  
+    #<strong>update</strong>(list, post_name)  &#x21d2; <tt>Nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Updates aspects of a post in a list</p>
+
+<p>This command takes a list and post, and requires a flag to be set to
+run. If no flag is set it will return. The set flag and the parameter
+with the flag are added into the lists configuration file under the
+post.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Using the <code>--completed</code> flag.</p>
+</div></h5>
+      
+      <pre class="example code"><code>❯ blog-tools lists update example example-post-1 --completed
+[✓] Marked &#39;example-post-1&#39; as complete</code></pre>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Using the <code>--in-progress</code> flag.</p>
+</div></h5>
+      
+      <pre class="example code"><code>❯ blog-tools lists update example example-post-2 --in-progress
+[✓] Marked &#39;example-post-2&#39; as in progress</code></pre>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Using the <code>--path</code> flag.</p>
+</div></h5>
+      
+      <pre class="example code"><code>❯ blog-tools lists update example example-post-1 --path ~/documents/writeup.md
+The post content is located at: /home/slavetomints/documents/writeup.md</code></pre>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Using the <code>--tags</code> flag.</p>
+</div></h5>
+      
+      <pre class="example code"><code>❯ blog-tools lists update example example-post-3 --tags 1 2 3
+Added the following tags to the post: [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>list</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the list</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>post_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the post</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/blog-tools/commands/lists.rb', line 244</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_list'>list</span><span class='comma'>,</span> <span class='id identifier rubyid_post_name'>post_name</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:completed</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:in_progress</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:tags</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[!] Please specify a status. Type &quot;blog-tools lists help update&quot; for more info.</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:red</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[!] List not found</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:red</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='ivar'>@lists</span><span class='lbracket'>[</span><span class='id identifier rubyid_list'>list</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[!] Post not found</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:red</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='ivar'>@lists</span><span class='lbracket'>[</span><span class='id identifier rubyid_list'>list</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:posts</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_post_name'>post_name</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_post'>post</span> <span class='op'>=</span> <span class='ivar'>@lists</span><span class='lbracket'>[</span><span class='id identifier rubyid_list'>list</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:posts</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_post_name'>post_name</span><span class='rbracket'>]</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:completed</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_post'>post</span><span class='lbracket'>[</span><span class='symbol'>:completed</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[!] Post already marked as complete</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:redd</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_post'>post</span><span class='lbracket'>[</span><span class='symbol'>:completed</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[✓] Marked &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_post_name'>post_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; as complete</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:green</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:in_progress</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_post'>post</span><span class='lbracket'>[</span><span class='symbol'>:in_progress</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[!] Post already marked as in progress</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:red</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_post'>post</span><span class='lbracket'>[</span><span class='symbol'>:in_progress</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[✓] Marked &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_post_name'>post_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; as in progress</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='symbol'>:green</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_post'>post</span><span class='lbracket'>[</span><span class='symbol'>:tags</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:tags</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:tags</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Added the following tags to the post: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:tags</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:tags</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_post'>post</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The post content is located at: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>
+
+  <span class='const'><span class='object_link'><a href="../Storage.html" title="BlogTools::Storage (module)">Storage</a></span></span><span class='period'>.</span><span class='id identifier rubyid_write_lists'><span class='object_link'><a href="../Storage.html#write_lists-class_method" title="BlogTools::Storage.write_lists (method)">write_lists</a></span></span><span class='lparen'>(</span><span class='ivar'>@lists</span><span class='rparen'>)</span>
+  <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Jul 31 12:02:55 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.4.4).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+lib/blog_tools.rb b1c5fc98ca5084dcc69fb6119aea1f9ec1a2aa6d
+lib/blog-tools/cli.rb fc57907d8f71c818237d613d548007cc7f430974
+lib/blog-tools/storage.rb a5b08c9be1d3f69c5feb2dc6e89dd837adf4b636
+lib/blog-tools/version.rb 678648f0d0c64999711fc0b6489e387c82199d22
+lib/blog-tools/commands.rb 68511a16b3bfb329b9d62dae24846e4494fdb477
+lib/blog-tools/commands/lists.rb 6b50fbdbf1e0ce1e0b6bdf7d20224fbc6b78a8af
+lib/blog-tools/commands/config.rb fd941dfaf45140bbc085b821bb12199d0f77b4dc
+lib/blog-tools/commands/generate.rb 0769a6e82548f18ac146cd8441829cd549836922
