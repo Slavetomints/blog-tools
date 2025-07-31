@@ -44,32 +44,32 @@ RSpec.describe BlogTools::Commands::Lists do
     described_class.start(%w[update test-list test-post2 --in-progress])
   end
 
-  describe '.list' do
+  describe '.show' do
     it 'prints all posts' do
       create_basic_list
       expect do
-        described_class.start(%w[list test-list])
+        described_class.start(%w[show test-list])
       end.to output("TEST-LIST\n- test-post1\n- test-post2\n").to_stdout
     end
 
     it 'prints out all completed posts' do
       create_complete_list
       expect do
-        described_class.start(%w[list test-list --completed])
+        described_class.start(%w[show test-list --completed])
       end.to output("TEST-LIST\n- test-post1\n").to_stdout
     end
 
     it 'prints out all in progress posts' do
       create_in_progress_list
       expect do
-        described_class.start(%w[list test-list --in-progress])
+        described_class.start(%w[show test-list --in-progress])
       end.to output("TEST-LIST\n- test-post1\n").to_stdout
     end
 
     it 'prints out all posts with status' do
       create_all_list
       expect do
-        described_class.start(%w[list test-list --status])
+        described_class.start(%w[show test-list --status])
       end.to output("TEST-LIST\n- [✓] test-post1\n- [~] test-post2\n- [ ] test-post3\n").to_stdout
     end
   end

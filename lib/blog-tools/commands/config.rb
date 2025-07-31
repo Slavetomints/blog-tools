@@ -2,13 +2,8 @@
 
 module BlogTools
   module Commands
-    # Config deals with all commands that configure how blog-tools works
+    # This command is a work in progress
     class Config < Thor
-      desc 'TITLE', 'Configure blog-tools'
-
-      def default(test)
-        puts test
-      end
     end
   end
 end

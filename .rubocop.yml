@@ -16,3 +16,4 @@ Metrics/BlockLength:
 
 plugins: 
   - rubocop-rspec
+  - rubocop-rake

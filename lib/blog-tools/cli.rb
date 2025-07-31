@@ -23,7 +23,7 @@ module BlogTools
   #
   # @example Running the CLI
   #   blog-tools generate my-post
-  #   blog-tools lists
+  #   blog-tools lists show my-list
   #   blog-tools config
   #
   # @see Commands::Generate
@@ -35,6 +35,7 @@ module BlogTools
     # This is called automatically when the CLI is run.
     #
     # @param [Array] args arguments passed to Thor
+    # @return [void]
     def initialize(*args)
       super
       Storage.setup!
@@ -55,7 +56,7 @@ module BlogTools
     # This command allows users to manage post lists.
     #
     # @see Commands::Lists
-    desc 'lists', 'Lists tools'
+    desc 'lists', 'Manage post lists'
     subcommand 'lists', Commands::Lists
 
     # Registers the `config` subcommand.

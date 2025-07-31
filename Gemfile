@@ -16,4 +16,6 @@ gem 'rubocop-rspec', '~> 3.6'
 
 gem 'rake', '~> 13.3'
 
-gem "yard", "~> 0.9.37"
+gem 'yard', '~> 0.9.37'
+
+gem 'rubocop-rake', '~> 0.7.1'

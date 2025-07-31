@@ -28,3 +28,12 @@ task :release do
   gem_file = "#{GEM_NAME}-#{VERSION}.gem"
   sh "gem push #{gem_file}"
 end
+
+desc 'Run RSpec and Rubocop tests'
+task :check do
+  puts 'Running RSpec tests...'
+  sh 'rspec --format d'
+
+  puts 'Running RuboCop...'
+  sh 'rubocop'
+end
