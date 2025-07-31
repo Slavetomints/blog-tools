@@ -6,7 +6,7 @@ source 'https://rubygems.org'
 
 gem 'rubocop', '~> 1.78'
 
-gem 'thor', '~> 1.3'
+gem 'thor', '~> 1.4'
 
 gem 'rspec', '~> 3.13'
 
